@@ -39,7 +39,7 @@ jobs:
         working-directory: terraform
  
     steps:
-    - name: azure/login
+    - name: azurelogin
       run: |
         az login 
     # Checkout the repository to the GitHub Actions runner
