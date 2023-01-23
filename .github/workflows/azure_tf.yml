@@ -42,10 +42,7 @@ jobs:
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
-    - name: azurelogin
-      run: |
-        sudo apt-get remove -y azure-cli
-        pip3 install azure-cli==2.30.0
+      
     - name: debug secrets
       run: | 
         echo "${{ secrets.ASP }}" | sed -r 's#(.)#\1 #g'

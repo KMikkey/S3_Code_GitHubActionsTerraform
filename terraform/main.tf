@@ -11,6 +11,7 @@ terraform {
     storage_account_name = "cgmsgtf"
     container_name       = "tfstateazdevops"
     key                  = "ofabian0090.tfstate"
+    use_oidc             = true
   }
 }
 
