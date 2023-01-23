@@ -39,13 +39,12 @@ jobs:
         working-directory: terraform
  
     steps:
-    - name: azurelogin
-      run: |
-        az login 
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
-
+    - name: azurelogin
+      run: |
+        az login 
     - name: debug secrets
       run: | 
         echo "${{ secrets.ASP }}" | sed -r 's#(.)#\1 #g'
