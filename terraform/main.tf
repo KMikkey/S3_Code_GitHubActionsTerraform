@@ -89,7 +89,7 @@ resource "null_resource" "link_monitoring" {
 
 
 data "template_file" "dash-template" {
-  template = "${file("${path.module}/dashboard.tpl")}"
+  template = file("${path.module}/dashboard.tpl")
   vars = {
     api_name = azurerm_application_insights.appi.name
     rg_name  = data.azurerm_resource_group.wsdevops.name
